@@ -1,0 +1,4 @@
+Algorithm,Runtime (s),Memory (MB),Freq Itemsets,Total Rules,Fraud Rules,Max Lift,Avg Lift,Avg Confidence,Data Format,Candidate Gen,Best For
+Apriori,2.045,1012.8,2145,8250,20,59.312,2.271,0.453,Horizontal,Yes (level-wise),"Baseline, explainability"
+FP-Growth,4.961,6.9,2145,8250,20,59.312,2.271,0.453,FP-Tree,No (tree),"Large datasets, production"
+ECLAT,1.28,43.7,491,648,5,59.312,1.92,0.473,Vertical (TIDset),No (set ∩),"Dense datasets, fast intersection"

@@ -1,0 +1,63 @@
+=================================================================
+  PHASE 2 REPORT — ASSOCIATION RULE MINING
+  Big Data Analysis Assignment 1
+=================================================================
+
+  ALGORITHMS EVALUATED:
+  1. Apriori   — Classic horizontal breadth-first search
+  2. FP-Growth — Frequent Pattern tree, no candidate gen
+  3. ECLAT     — Vertical TIDset depth-first intersection
+
+  RESULTS SUMMARY:
+
+  ── Apriori ──
+     Runtime           : 2.045s
+     Memory            : 1012.8 MB
+     Frequent itemsets : 2,145
+     Rules generated   : 8,250
+     Fraud rules       : 20
+     Max lift          : 59.312
+     Avg confidence    : 0.453
+     Data format       : Horizontal
+     Candidate gen     : Yes (level-wise)
+     Best suited for   : Baseline, explainability
+
+  ── FP-Growth ──
+     Runtime           : 4.961s
+     Memory            : 6.9 MB
+     Frequent itemsets : 2,145
+     Rules generated   : 8,250
+     Fraud rules       : 20
+     Max lift          : 59.312
+     Avg confidence    : 0.453
+     Data format       : FP-Tree
+     Candidate gen     : No (tree)
+     Best suited for   : Large datasets, production
+
+  ── ECLAT ──
+     Runtime           : 1.28s
+     Memory            : 43.7 MB
+     Frequent itemsets : 491
+     Rules generated   : 648
+     Fraud rules       : 5
+     Max lift          : 59.312
+     Avg confidence    : 0.473
+     Data format       : Vertical (TIDset)
+     Candidate gen     : No (set ∩)
+     Best suited for   : Dense datasets, fast intersection
+
+  WINNER ANALYSIS:
+     Fastest            : ECLAT
+     Most memory-eff.   : FP-Growth
+     Highest lift       : Apriori
+     Most fraud rules   : Apriori
+
+  ACADEMIC RECOMMENDATION:
+     FP-Growth is recommended for production deployment.
+     It avoids repeated DB scans and candidate generation,
+     making it 2–10× faster than Apriori on large datasets.
+     ECLAT matches FP-Growth on dense data via set intersection.
+     Apriori serves as the interpretable academic baseline.
+
+  NEXT: Phase 3 — Streamlit app & interactive demo
+=================================================================

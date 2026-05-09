@@ -1,0 +1,26 @@
+=================================================================
+  PHASE 1 — EDA & PREPROCESSING REPORT
+  Big Data Analysis Assignment 1
+=================================================================
+
+  Dataset        : IEEE-CIS Fraud Detection
+  Total records  : 590,540
+  Fraud cases    : 20,663
+  Legit cases    : 569,877
+  Fraud rate     : 3.499%
+
+  Median Amt (Fraud) : $75.0
+  Median Amt (Legit) : $68.5
+
+  Item matrix    : 590,540 transactions
+                   × 1837 items
+  Avg items/txn  : 17.00
+
+  Output files:
+    - item_matrix.csv     (for Phase 2 ARM algorithms)
+    - item_matrix.parquet (faster load)
+    - item_reference.csv  (item support counts)
+    - fig1–fig7 PNG       (publication figures)
+
+  NEXT: Phase 2 — Apriori / FP-Growth / ECLAT
+=================================================================
